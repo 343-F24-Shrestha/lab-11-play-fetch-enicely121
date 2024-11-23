@@ -6,5 +6,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Each user should be in a new <div> with the user's first name, last name, and profile image.
     // The format should follow the example user in the HTML file.
 
-    // TODO
+    const response = await fetch("https://reqres.in/api/users?page=1");
+    const data = await response.json();
+    data.forEach(user => {
+
+        const card = document.createElement("div");
+
+
+
+        const name = document.createElement("h2");
+
+
+
+        const avatar = document.createElement("img");
+
+
+
+        card.appendChild(name);
+        card.appendChild(avatar);
+
+
+        userList.appendChild(card);
+
+
 });
+})
